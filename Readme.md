@@ -8,3 +8,5 @@
 * entendo o porque de projetar um software;
 * definição de problema para o projeto de aplicativo;
 * organização dos trabalhos em repositorio do Github.
+
+### semana 2
