@@ -10,3 +10,8 @@
 * organização dos trabalhos em repositorio do Github.
 
 ### semana 2
+* Diagrama de casos de uso;
+* ferramentas para criação de diagramas;
+* linguagem do plantUML para geração de diagramas;
+* exercicio 1;
+* descrição de casos de uso.
