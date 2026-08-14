@@ -1,4 +1,4 @@
-@startuml 
+@startuml diagrama de reserva de livros
 left to right direction
 
 ' definição de atores
