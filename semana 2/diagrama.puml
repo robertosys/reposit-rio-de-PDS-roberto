@@ -1,0 +1,27 @@
+@startuml 
+left to right direction
+
+' definição de atores
+actor aluno
+actor bibliotecaria
+actor tecnico 
+
+' fronteiras de sistema
+rectangle " sistema de reserva de livros" {
+  ' definição de casos de uso
+  usecase "buscar livro" as UC1
+  usecase "reservar livro" as UC2
+  usecase "fazer login" as UC3
+  usecase "gerenciar estoque" as UC4
+  usecase "manutenção sistema" as UC5
+  ' relacionamentos internos
+  UC3 ..> UC1 :<<include>>
+  UC2 ..> UC1 :<<extend>>
+
+}
+
+'associações entre atores e casos de uso
+aluno --> UC3
+bibliotecaria --> UC4
+tecnico --> UC5
+@enduml
