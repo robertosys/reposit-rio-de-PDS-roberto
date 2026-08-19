@@ -16,6 +16,6 @@
 * exercicio 1;
 * descrição de casos de uso.
 ### semana 3
-*Descrição textual de casos de uso.
-*Diagrama de sequencia.
+* Descrição textual de casos de uso.
+* Diagrama de sequencia.
 
