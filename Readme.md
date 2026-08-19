@@ -15,3 +15,7 @@
 * linguagem do plantUML para geração de diagramas;
 * exercicio 1;
 * descrição de casos de uso.
+### semana 3
+*Descrição textual de casos de uso.
+*Diagrama de sequencia.
+
