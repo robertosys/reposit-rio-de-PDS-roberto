@@ -4,15 +4,33 @@ sequenceDiagram
     participant T as :TelaDeReserva
     participant C as :ControladorReserva
     participant L as :Livro
+    participant CE as :CadastroDeEstudante
 
-    %% Construindo o diagrama (incompleto)
-    A->>T:1 reservarLivro()
+    %% Construindo o diagrama completo
+    A->>T: 1 reservarLivro()
     activate T
-    T->>C:2 solicitarReserva(livro)
+    T->>C: 2 solicitarReserva(livro)
     activate C
-    C->>L:3 verificarDisponibilidade():boolean
+    C->>L: 3 verificarDisponibilidade(): boolean
     activate L
-    L-->>C:3.1 disponivel:true
+    L-->>C: 3.1 disponivel: true
     deactivate L
+    
+    %% Passo 4: Verificando o Estudante
+    C->>CE: 4 verificarPendencias(Estudante)
+    activate CE
+    CE-->>C: 4.1 semPendencias: true
+    deactivate CE
+    
+    %% Passo 5: Concluindo a Reserva e Atualizando o Status
+    Note over C: 5 Registrar reserva
+    C->>L: 5.1 atualizarStatus()
+    activate L
+    L-->>C: 5.2 statusAtualizado
+    deactivate L
+    
+    %% Retorno das mensagens até o Ator
+    C-->>T: 6 confirmacaoReserva()
     deactivate C
+    T-->>A: 7 exibeMensagemSucesso()
     deactivate T
