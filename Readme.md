@@ -18,4 +18,5 @@
 ### semana 3
 * Descrição textual de casos de uso.
 * Diagrama de sequencia.
+* Formatação UML por mermaid.
 
