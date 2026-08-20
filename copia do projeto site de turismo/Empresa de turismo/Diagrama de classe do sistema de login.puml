@@ -1,0 +1,24 @@
+@startuml diagrama empresa de turismo/site de viagens/turismo
+left to right direction
+' definição de atores
+actor "cliente"
+actor "banco de dados" 
+' fronteiras de sistema
+rectangle "sistema de login" {
+  ' definição de casos de uso
+  usecase "login" as UC1
+  usecase "validação dados" as UC2
+  usecase "acessar site" as UC3
+  usecase "acesso liberado" as UC4
+  usecase "acesso negado" as UC5
+
+    UC1 -.> UC2 : <<include>>
+    UC2 -.> UC4 : <<extend>>
+    UC2 -.> UC5 : <<extend>>
+    UC5 -.> UC1 : <<extend>>
+    UC4 -.> UC3 : <<include>>
+
+}
+  cliente --> UC1
+  UC2 --> "banco de dados" : <<include>>
+@enduml
